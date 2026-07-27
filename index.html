@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prasanna Raj | Senior Technical Support Engineer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        header {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+        }
+
+        .hero {
+            max-width: 1100px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            color: #38bdf8;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: 1.8rem;
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            max-width: 650px;
+        }
+
+        .profile-card {
+            background: rgba(30, 41, 59, 0.8);
+            padding: 35px;
+            border-radius: 20px;
+            border: 1px solid #334155;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+
+        .profile-icon {
+            width: 140px;
+            height: 140px;
+            margin: auto;
+            border-radius: 50%;
+            background: #38bdf8;
+            color: #0f172a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            margin-right: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        .btn.secondary {
+            background: transparent;
+            color: #38bdf8;
+            border: 1px solid #38bdf8;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #020617;
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 90px 20px;
+        }
+
+        section h2 {
+            font-size: 2.4rem;
+            color: #38bdf8;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about {
+            text-align: center;
+            max-width: 850px;
+            margin: auto;
+            color: #cbd5e1;
+            font-size: 1.1rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card,
+        .experience-card,
+        .cert-card {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #334155;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .skill-card:hover,
+        .experience-card:hover,
+        .cert-card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        .skill-card h3,
+        .experience-card h3,
+        .cert-card h3 {
+            color: #f8fafc;
+            margin-bottom: 10px;
+        }
+
+        .skill-card p,
+        .experience-card p,
+        .cert-card p {
+            color: #94a3b8;
+        }
+
+        .experience-card {
+            margin-bottom: 25px;
+        }
+
+        .experience-card span {
+            color: #38bdf8;
+            font-weight: bold;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 12px 0;
+            color: #cbd5e1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #020617;
+            color: #64748b;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            nav a {
+                margin: 0 6px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="home">
+        <div class="hero">
+
+            <div>
+                <h1>Prasanna Raj</h1>
+                <h2>Technical Support Engineer | SSL/TLS Specialist</h2>
+
+                <p>
+                    Experienced technical support professional specializing in SSL/TLS certificates,
+                    PKI, certificate lifecycle management, Sectigo Certificate Manager,
+                    certificate validation, troubleshooting, and enterprise security solutions.
+                </p>
+
+                <div class="buttons">
+                    <a href="#contact" class="btn">Contact Me</a>
+                    <a href="#experience" class="btn secondary">View Experience</a>
+                </div>
+            </div>
+
+            <div class="profile-card">
+                <div class="profile-icon">PR</div>
+                <h3>Prasanna Raj</h3>
+                <p>SSL/TLS & PKI Technical Support Professional</p>
+                <p>Enterprise Certificate Management</p>
+            </div>
+
+        </div>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+
+        <div class="about">
+            <p>
+                I am a technical support professional with extensive experience in SSL/TLS,
+                PKI, digital certificates, certificate lifecycle management, and enterprise
+                security technologies.
+            </p>
+
+            <br>
+
+            <p>
+                My work involves assisting customers and enterprise organizations with certificate
+                issuance, CSR generation, domain validation, CAA records, DNS validation,
+                certificate installation, reissuance, renewal, certificate chains, and
+                troubleshooting complex trust and compatibility issues.
+            </p>
+
+            <br>
+
+            <p>
+                I am passionate about solving technical problems, improving customer experience,
+                sharing knowledge, and continuously developing my expertise in cybersecurity and
+                enterprise certificate management.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <h3>SSL/TLS & PKI</h3>
+                <p>
+                    SSL/TLS certificates, CSR generation, certificate chains, root and intermediate
+                    CAs, trust stores, SANs, certificate renewal and reissuance.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Domain Validation</h3>
+                <p>
+                    HTTP/HTTPS DCV, DNS TXT, CNAME validation, CAA records, DNS propagation,
+                    MPIC validation and troubleshooting.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Enterprise Certificate Management</h3>
+                <p>
+                    Sectigo Certificate Manager, certificate lifecycle management, certificate
+                    discovery, automation, integrations and enterprise PKI workflows.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Certificate Formats</h3>
+                <p>
+                    PEM, DER, PFX, PKCS#12, PKCS#7, OpenSSL, IIS, Apache, Plesk and DirectAdmin.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Digital Signing</h3>
+                <p>
+                    Code Signing, EV Code Signing, SafeNet Authentication Client, USB tokens,
+                    KSP/CSP technologies and signing workflows.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Technical Troubleshooting</h3>
+                <p>
+                    Root cause analysis, certificate trust issues, compatibility problems,
+                    DNS troubleshooting and enterprise security support.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Professional Experience</h2>
+
+        <div class="experience-card">
+            <h3>Sectigo</h3>
+            <p><span>Technical Support Engineer</span></p>
+            <p>
+                Supporting SSL/TLS certificates, PKI, Sectigo Certificate Manager,
+                certificate validation, certificate lifecycle management, enterprise customers,
+                resellers and partners.
+            </p>
+        </div>
+
+        <div class="experience-card">
+            <h3>Previous Professional Experience</h3>
+            <p>
+                Experience across technical support, customer service, enterprise operations,
+                and technology-focused roles with organizations including Hexaware,
+                Sutherland and Hindustan Unilever.
+            </p>
+        </div>
+
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications & Expertise</h2>
+
+        <div class="skills-grid">
+
+            <div class="cert-card">
+                <h3>SSL/TLS & PKI Expertise</h3>
+                <p>
+                    Practical expertise in Public Key Infrastructure, certificate authorities,
+                    trust chains and certificate lifecycle management.
+                </p>
+            </div>
+
+            <div class="cert-card">
+                <h3>Enterprise Security</h3>
+                <p>
+                    Experience supporting enterprise certificate management platforms,
+                    integrations, automation and digital identity solutions.
+                </p>
+            </div>
+
+            <div class="cert-card">
+                <h3>Continuous Learning</h3>
+                <p>
+                    Continuously expanding knowledge in cybersecurity, cloud technologies,
+                    automation and enterprise security.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+
+        <div class="contact">
+            <p>Interested in connecting or discussing SSL/TLS and PKI?</p>
+
+            <p>
+                <strong>Professional Profile:</strong>
+                Technical Support | SSL/TLS | PKI | Certificate Management
+            </p>
+
+            <p>
+                <strong>Location:</strong> Chennai, India
+            </p>
+
+            <p>
+                Feel free to connect with me through my professional networks.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Prasanna Raj. All rights reserved.</p>
+        <p>SSL/TLS • PKI • Certificate Management • Cybersecurity</p>
+    </footer>
+
+</body>
+</html>
