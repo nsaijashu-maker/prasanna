@@ -1,431 +1,438 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prasanna Raj | Senior Technical Support Engineer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A. Prasanna Raj - Senior System Engineer specializing in SSL/TLS, PKI, certificate lifecycle management and technical support.">
+<title>A. Prasanna Raj | Senior System Engineer</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+<style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.7;
+        background: #f5f7fb;
+        color: #1f2937;
+    }
+    a { color: inherit; text-decoration: none; }
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #0f172a;
-            color: #e2e8f0;
-            line-height: 1.6;
-        }
+    .hero {
+        background: linear-gradient(135deg, #111827, #243b53);
+        color: white;
+        padding: 70px 20px;
+    }
+    .hero-inner {
+        max-width: 1100px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        gap: 45px;
+    }
+    .profile-photo {
+        width: 190px;
+        height: 190px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 5px solid rgba(255,255,255,.9);
+        box-shadow: 0 12px 35px rgba(0,0,0,.25);
+        flex-shrink: 0;
+    }
+    .hero h1 {
+        font-size: 46px;
+        line-height: 1.15;
+        margin-bottom: 10px;
+    }
+    .hero h2 {
+        font-size: 23px;
+        font-weight: 400;
+        margin-bottom: 18px;
+        opacity: .95;
+    }
+    .tagline {
+        max-width: 720px;
+        font-size: 17px;
+        opacity: .9;
+    }
+    .location {
+        margin-top: 16px;
+        opacity: .85;
+    }
 
-        header {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-        }
+    nav {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: white;
+        box-shadow: 0 2px 12px rgba(0,0,0,.08);
+    }
+    nav .nav-inner {
+        max-width: 1100px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px 15px;
+    }
+    nav a {
+        padding: 8px 14px;
+        border-radius: 8px;
+        color: #374151;
+        font-weight: 600;
+    }
+    nav a:hover {
+        background: #eef2ff;
+        color: #1d4ed8;
+    }
 
-        .hero {
-            max-width: 1100px;
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 50px;
-            align-items: center;
-        }
+    .container {
+        max-width: 1100px;
+        margin: auto;
+        padding: 45px 20px;
+    }
+    section { margin-bottom: 48px; }
+    .section-title {
+        font-size: 30px;
+        color: #111827;
+        margin-bottom: 24px;
+        padding-bottom: 10px;
+        border-bottom: 3px solid #dbe4f0;
+    }
+    .section-title span { color: #2563eb; }
 
-        .hero h1 {
-            font-size: 4rem;
-            color: #38bdf8;
-            margin-bottom: 15px;
-        }
+    .card {
+        background: white;
+        border-radius: 14px;
+        padding: 28px;
+        margin-bottom: 20px;
+        box-shadow: 0 5px 22px rgba(15,23,42,.07);
+        border: 1px solid #e5e7eb;
+    }
 
-        .hero h2 {
-            font-size: 1.8rem;
-            color: #cbd5e1;
-            margin-bottom: 20px;
-        }
+    .summary {
+        font-size: 17px;
+        color: #374151;
+    }
 
-        .hero p {
-            font-size: 1.1rem;
-            color: #94a3b8;
-            max-width: 650px;
-        }
+    .objective-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+    .objective {
+        background: #fff;
+        padding: 18px;
+        border-radius: 10px;
+        border-left: 4px solid #2563eb;
+        box-shadow: 0 3px 15px rgba(0,0,0,.05);
+    }
 
-        .profile-card {
-            background: rgba(30, 41, 59, 0.8);
-            padding: 35px;
-            border-radius: 20px;
-            border: 1px solid #334155;
-            text-align: center;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-        }
+    .job {
+        position: relative;
+    }
+    .job h3 {
+        font-size: 22px;
+        color: #111827;
+        margin-bottom: 4px;
+    }
+    .job .role {
+        color: #2563eb;
+        font-weight: 700;
+        margin-bottom: 14px;
+    }
+    .job ul {
+        padding-left: 22px;
+    }
+    .job li { margin-bottom: 7px; }
 
-        .profile-icon {
-            width: 140px;
-            height: 140px;
-            margin: auto;
-            border-radius: 50%;
-            background: #38bdf8;
-            color: #0f172a;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .skill {
+        background: #eef2ff;
+        color: #1e40af;
+        padding: 8px 14px;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 14px;
+    }
 
-        .buttons {
-            margin-top: 30px;
-        }
+    .education-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 18px rgba(0,0,0,.06);
+    }
+    .education-table th, .education-table td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #e5e7eb;
+    }
+    .education-table th {
+        background: #1f2937;
+        color: white;
+    }
 
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            margin-right: 10px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            background: #38bdf8;
-            color: #0f172a;
-        }
+    .hobbies {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+    .hobby {
+        background: white;
+        padding: 22px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 4px 18px rgba(0,0,0,.06);
+    }
 
-        .btn.secondary {
-            background: transparent;
-            color: #38bdf8;
-            border: 1px solid #38bdf8;
-        }
+    .contact {
+        background: #111827;
+        color: white;
+        border-radius: 16px;
+        padding: 35px;
+    }
+    .contact p { margin: 9px 0; }
+    .contact a { color: #93c5fd; }
 
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: #020617;
-            padding: 15px;
-            text-align: center;
-            border-bottom: 1px solid #1e293b;
-        }
+    footer {
+        text-align: center;
+        padding: 28px 20px;
+        background: #0b1120;
+        color: #cbd5e1;
+        font-size: 14px;
+    }
 
-        nav a {
-            color: #cbd5e1;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #38bdf8;
-        }
-
-        section {
-            max-width: 1100px;
-            margin: auto;
-            padding: 90px 20px;
-        }
-
-        section h2 {
-            font-size: 2.4rem;
-            color: #38bdf8;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .about {
-            text-align: center;
-            max-width: 850px;
-            margin: auto;
-            color: #cbd5e1;
-            font-size: 1.1rem;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
-
-        .skill-card,
-        .experience-card,
-        .cert-card {
-            background: #1e293b;
-            padding: 25px;
-            border-radius: 15px;
-            border: 1px solid #334155;
-            transition: transform 0.3s, border-color 0.3s;
-        }
-
-        .skill-card:hover,
-        .experience-card:hover,
-        .cert-card:hover {
-            transform: translateY(-5px);
-            border-color: #38bdf8;
-        }
-
-        .skill-card h3,
-        .experience-card h3,
-        .cert-card h3 {
-            color: #f8fafc;
-            margin-bottom: 10px;
-        }
-
-        .skill-card p,
-        .experience-card p,
-        .cert-card p {
-            color: #94a3b8;
-        }
-
-        .experience-card {
-            margin-bottom: 25px;
-        }
-
-        .experience-card span {
-            color: #38bdf8;
-            font-weight: bold;
-        }
-
-        .contact {
-            text-align: center;
-        }
-
-        .contact p {
-            margin: 12px 0;
-            color: #cbd5e1;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: #020617;
-            color: #64748b;
-        }
-
-        @media (max-width: 768px) {
-            .hero {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-
-            nav a {
-                margin: 0 6px;
-                font-size: 0.9rem;
-            }
-        }
-    </style>
+    @media (max-width: 760px) {
+        .hero-inner { flex-direction: column; text-align: center; }
+        .hero h1 { font-size: 36px; }
+        .profile-photo { width: 155px; height: 155px; }
+        .objective-grid, .hobbies { grid-template-columns: 1fr; }
+        .education-table { font-size: 14px; }
+        .education-table th, .education-table td { padding: 10px; }
+    }
+</style>
 </head>
 
 <body>
 
-    <header id="home">
-        <div class="hero">
-
-            <div>
-                <h1>Prasanna Raj</h1>
-                <h2>Technical Support Engineer | SSL/TLS Specialist</h2>
-
-                <p>
-                    Experienced technical support professional specializing in SSL/TLS certificates,
-                    PKI, certificate lifecycle management, Sectigo Certificate Manager,
-                    certificate validation, troubleshooting, and enterprise security solutions.
-                </p>
-
-                <div class="buttons">
-                    <a href="#contact" class="btn">Contact Me</a>
-                    <a href="#experience" class="btn secondary">View Experience</a>
-                </div>
-            </div>
-
-            <div class="profile-card">
-                <div class="profile-icon">PR</div>
-                <h3>Prasanna Raj</h3>
-                <p>SSL/TLS & PKI Technical Support Professional</p>
-                <p>Enterprise Certificate Management</p>
-            </div>
-
+<header class="hero">
+    <div class="hero-inner">
+        <img class="profile-photo" src="profile.jpg" alt="A. Prasanna Raj">
+        <div>
+            <h1>A. Prasanna Raj</h1>
+            <h2>Senior System Engineer | SSL/TLS & PKI Technical Support</h2>
+            <p class="tagline">
+                Technical support professional experienced in SSL/TLS certificate lifecycle management,
+                S/MIME, certificate deployment, server administration, SafeNet integration and enterprise troubleshooting.
+            </p>
+            <p class="location">📍 Chennai, Tamil Nadu, India</p>
         </div>
-    </header>
+    </div>
+</header>
 
-    <nav>
+<nav>
+    <div class="nav-inner">
         <a href="#about">About</a>
-        <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
-        <a href="#certifications">Certifications</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#hobbies">Hobbies</a>
         <a href="#contact">Contact</a>
-    </nav>
+    </div>
+</nav>
 
-    <section id="about">
-        <h2>About Me</h2>
+<main class="container">
 
-        <div class="about">
-            <p>
-                I am a technical support professional with extensive experience in SSL/TLS,
-                PKI, digital certificates, certificate lifecycle management, and enterprise
-                security technologies.
-            </p>
+<section id="about">
+    <h2 class="section-title"><span>01.</span> About Me</h2>
 
-            <br>
+    <div class="card">
+        <p class="summary">
+            Senior System Engineer with extensive experience in SSL/TLS certificate lifecycle management,
+            S/MIME setup, SafeNet integration, and VMware environments. Proven track record of supporting
+            secure infrastructures across Windows, Linux, and Mac OS platforms. Experienced in remote
+            troubleshooting, server administration, payment gateway configuration, and cloud technologies
+            including Azure and AWS.
+        </p>
+        <br>
+        <p class="summary">
+            Recognized as a fast learner, team player and reliable contributor in high-pressure technical
+            support environments, with a strong focus on customer service, troubleshooting and secure
+            certificate deployment.
+        </p>
+    </div>
 
-            <p>
-                My work involves assisting customers and enterprise organizations with certificate
-                issuance, CSR generation, domain validation, CAA records, DNS validation,
-                certificate installation, reissuance, renewal, certificate chains, and
-                troubleshooting complex trust and compatibility issues.
-            </p>
-
-            <br>
-
-            <p>
-                I am passionate about solving technical problems, improving customer experience,
-                sharing knowledge, and continuously developing my expertise in cybersecurity and
-                enterprise certificate management.
-            </p>
+    <div class="card">
+        <h3>Career Objective</h3>
+        <div class="objective-grid" style="margin-top:18px;">
+            <div class="objective">Good team player and quick learner.</div>
+            <div class="objective">Good presentation skills and creativity.</div>
+            <div class="objective">Approach every assignment with care and responsibility.</div>
+            <div class="objective">Honest, sincere and hardworking with a high level of integrity.</div>
+            <div class="objective">Face challenges in life with a positive attitude.</div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="skills">
-        <h2>Technical Skills</h2>
+<section id="experience">
+    <h2 class="section-title"><span>02.</span> Professional Experience</h2>
 
-        <div class="skills-grid">
+    <div class="card job">
+        <h3>Senior System Engineer – Sectigo</h3>
+        <div class="role">Level 2 Technical Support · Current</div>
+        <ul>
+            <li>Handle configuration and support of SSL/TLS and S/MIME certificates across diverse server and webmail environments.</li>
+            <li>Assist with integration of SafeNet Client, VMware and Windows Server environments.</li>
+            <li>Work with MMC, IIS, cPanel, OpenSSL, Azure Key Vault and AWS.</li>
+            <li>Troubleshoot certificate lifecycle, certificate chain, validation and deployment issues.</li>
+            <li>Support enterprise customers, partners and resellers in secure certificate deployments.</li>
+        </ul>
+    </div>
 
-            <div class="skill-card">
-                <h3>SSL/TLS & PKI</h3>
-                <p>
-                    SSL/TLS certificates, CSR generation, certificate chains, root and intermediate
-                    CAs, trust stores, SANs, certificate renewal and reissuance.
-                </p>
-            </div>
+    <div class="card job">
+        <h3>Technical Support Engineer – Touch2Success (Foodhub)</h3>
+        <div class="role">Dec 2018 – Nov 2022</div>
+        <ul>
+            <li>Provided remote technical support for clients in the UK, US and Egypt in the food industry.</li>
+            <li>Configured EPOS, MYPOS, PDQ payment systems and VMware Workstation environments.</li>
+            <li>Assisted with web-based POS and online ordering system configuration and troubleshooting.</li>
+        </ul>
+    </div>
 
-            <div class="skill-card">
-                <h3>Domain Validation</h3>
-                <p>
-                    HTTP/HTTPS DCV, DNS TXT, CNAME validation, CAA records, DNS propagation,
-                    MPIC validation and troubleshooting.
-                </p>
-            </div>
+    <div class="card job">
+        <h3>Senior Technical Support – Hexaware Technologies Ltd</h3>
+        <div class="role">First Advantage – BGV · Jul 2018 – Nov 2018</div>
+        <ul>
+            <li>Processed background verifications for US-based employment.</li>
+        </ul>
+    </div>
 
-            <div class="skill-card">
-                <h3>Enterprise Certificate Management</h3>
-                <p>
-                    Sectigo Certificate Manager, certificate lifecycle management, certificate
-                    discovery, automation, integrations and enterprise PKI workflows.
-                </p>
-            </div>
+    <div class="card job">
+        <h3>Senior Consultant – Sutherland Global Services</h3>
+        <div class="role">McAfee US Process · Nov 2016 – Jun 2017</div>
+        <ul>
+            <li>Worked in sales and retention for McAfee security products in a high-volume voice support environment.</li>
+        </ul>
+    </div>
 
-            <div class="skill-card">
-                <h3>Certificate Formats</h3>
-                <p>
-                    PEM, DER, PFX, PKCS#12, PKCS#7, OpenSSL, IIS, Apache, Plesk and DirectAdmin.
-                </p>
-            </div>
+    <div class="card job">
+        <h3>Medical Representative – Hindustan Unilever Ltd</h3>
+        <div class="role">Oral Care Division · Nov 2014 – Nov 2016</div>
+        <ul>
+            <li>Managed retail distribution and sales across Tamil Nadu through Randstad and Team Lease.</li>
+        </ul>
+    </div>
 
-            <div class="skill-card">
-                <h3>Digital Signing</h3>
-                <p>
-                    Code Signing, EV Code Signing, SafeNet Authentication Client, USB tokens,
-                    KSP/CSP technologies and signing workflows.
-                </p>
-            </div>
+    <div class="card job">
+        <h3>Consultant – Mind Gates</h3>
+        <div class="role">Microsoft Xbox Products – US/UK · Dec 2009 – Jan 2014</div>
+        <ul>
+            <li>Provided consultation and distribution support for Xbox entertainment products.</li>
+        </ul>
+    </div>
 
-            <div class="skill-card">
-                <h3>Technical Troubleshooting</h3>
-                <p>
-                    Root cause analysis, certificate trust issues, compatibility problems,
-                    DNS troubleshooting and enterprise security support.
-                </p>
-            </div>
+    <div class="card job">
+        <h3>Sales Executive – FEM CARE PHARMA</h3>
+        <div class="role">Tamil Nadu & Pondicherry · Sep 2007 – Nov 2009</div>
+        <ul>
+            <li>Managed distributor relations and market development for cosmetic product lines.</li>
+        </ul>
+    </div>
+</section>
 
+<section id="skills">
+    <h2 class="section-title"><span>03.</span> Technical Skills</h2>
+    <div class="card">
+        <div class="skills">
+            <span class="skill">SSL/TLS</span>
+            <span class="skill">PKI</span>
+            <span class="skill">Certificate Lifecycle</span>
+            <span class="skill">S/MIME</span>
+            <span class="skill">OpenSSL</span>
+            <span class="skill">CSR</span>
+            <span class="skill">PFX / PKCS#12</span>
+            <span class="skill">PEM</span>
+            <span class="skill">JKS</span>
+            <span class="skill">SafeNet</span>
+            <span class="skill">MMC</span>
+            <span class="skill">IIS</span>
+            <span class="skill">cPanel</span>
+            <span class="skill">Windows Server</span>
+            <span class="skill">Linux</span>
+            <span class="skill">VMware</span>
+            <span class="skill">Azure</span>
+            <span class="skill">AWS</span>
+            <span class="skill">Azure Key Vault</span>
+            <span class="skill">DNS / CAA / DCV</span>
+            <span class="skill">Technical Support</span>
+            <span class="skill">Remote Troubleshooting</span>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="experience">
-        <h2>Professional Experience</h2>
+<section id="education">
+    <h2 class="section-title"><span>04.</span> Education</h2>
+    <table class="education-table">
+        <thead>
+            <tr>
+                <th>Qualification</th>
+                <th>Institution</th>
+                <th>Specialization</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>BBA</td>
+                <td>VLB Janaki Ammal</td>
+                <td>Computer Applications</td>
+                <td>2006</td>
+            </tr>
+            <tr>
+                <td>HSC (+2)</td>
+                <td>Springfield Matriculation Higher Secondary School, Chennai</td>
+                <td>Higher Secondary</td>
+                <td>2002</td>
+            </tr>
+            <tr>
+                <td>Std 10</td>
+                <td>Springfield Matriculation Higher Secondary School, Chennai</td>
+                <td>Secondary Education</td>
+                <td>2000</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
 
-        <div class="experience-card">
-            <h3>Sectigo</h3>
-            <p><span>Technical Support Engineer</span></p>
-            <p>
-                Supporting SSL/TLS certificates, PKI, Sectigo Certificate Manager,
-                certificate validation, certificate lifecycle management, enterprise customers,
-                resellers and partners.
-            </p>
-        </div>
+<section id="hobbies">
+    <h2 class="section-title"><span>05.</span> Extra Curricular & Hobbies</h2>
+    <div class="hobbies">
+        <div class="hobby">⚽<br><strong>Football & Kabaddi</strong></div>
+        <div class="hobby">🎮<br><strong>Video Games</strong><br>PS3 · PS4 · Xbox · PC</div>
+        <div class="hobby">🎬<br><strong>Movies & Music</strong></div>
+    </div>
+</section>
 
-        <div class="experience-card">
-            <h3>Previous Professional Experience</h3>
-            <p>
-                Experience across technical support, customer service, enterprise operations,
-                and technology-focused roles with organizations including Hexaware,
-                Sutherland and Hindustan Unilever.
-            </p>
-        </div>
+<section id="contact">
+    <h2 class="section-title"><span>06.</span> Contact</h2>
+    <div class="contact">
+        <p>📍 Chennai, Tamil Nadu, India</p>
+        <p>📞 <a href="tel:+917200352577">+91 72003 52577</a></p>
+        <p>✉️ <a href="mailto:nsaijashu@gmail.com">nsaijashu@gmail.com</a></p>
+    </div>
+</section>
 
-    </section>
+</main>
 
-    <section id="certifications">
-        <h2>Certifications & Expertise</h2>
-
-        <div class="skills-grid">
-
-            <div class="cert-card">
-                <h3>SSL/TLS & PKI Expertise</h3>
-                <p>
-                    Practical expertise in Public Key Infrastructure, certificate authorities,
-                    trust chains and certificate lifecycle management.
-                </p>
-            </div>
-
-            <div class="cert-card">
-                <h3>Enterprise Security</h3>
-                <p>
-                    Experience supporting enterprise certificate management platforms,
-                    integrations, automation and digital identity solutions.
-                </p>
-            </div>
-
-            <div class="cert-card">
-                <h3>Continuous Learning</h3>
-                <p>
-                    Continuously expanding knowledge in cybersecurity, cloud technologies,
-                    automation and enterprise security.
-                </p>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-
-        <div class="contact">
-            <p>Interested in connecting or discussing SSL/TLS and PKI?</p>
-
-            <p>
-                <strong>Professional Profile:</strong>
-                Technical Support | SSL/TLS | PKI | Certificate Management
-            </p>
-
-            <p>
-                <strong>Location:</strong> Chennai, India
-            </p>
-
-            <p>
-                Feel free to connect with me through my professional networks.
-            </p>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2026 Prasanna Raj. All rights reserved.</p>
-        <p>SSL/TLS • PKI • Certificate Management • Cybersecurity</p>
-    </footer>
+<footer>
+    © 2026 A. Prasanna Raj · Senior System Engineer II · SSL/TLS & PKI Technical Support
+</footer>
 
 </body>
 </html>
